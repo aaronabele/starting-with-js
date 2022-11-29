@@ -1,3 +1,1 @@
-function countSpaces() {
-  // your code
-}
+function countSpaces() {}
