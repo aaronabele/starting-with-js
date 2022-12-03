@@ -55,6 +55,7 @@ addToCart.reverse();
 }*/
 
 // add2basket
+/*‚
 
 const cart = ["Jam", "Coffee", "Mild"];
 
@@ -104,5 +105,61 @@ for (i = 0; i < firstName.length; i++) {
     counter = 0;
   } else {
     counter += 1;
+  }
+}
+
+// add to basket
+
+const basket = [];
+
+function addToBasket2(item) {
+  basket.push(item);
+}
+
+addToBasket2("Coffee");
+addToBasket2("Jam");
+
+console.log(basket.toString());
+
+const names = ["Aaron", "Mike", "Huso", "Patrick"];
+
+names.reverse();
+{
+  console.log(names);
+}
+
+console.log(names.length);
+
+let count2 = 0;
+
+for (i = 0; i < names.length; i++) {
+  if (count2 === 1) {
+    console.log(names[i].toLocaleUpperCase());
+    count2 = 0;
+  } else {
+    count2 += 1;
+  }
+} */
+
+let names = "Aaron";
+let counter = 0;
+
+for (i = 0; i < names.length; i++) {
+  if (counter === 1) {
+    console.log(names[i].toLocaleUpperCase());
+    counter = 0;
+  } else {
+    counter += 1;
+  }
+}
+
+const str = ["Aaron", "Huso"];
+
+for (i = 0; i < str.length; i++) {
+  if (i % 2 === 1) {
+    str = str[i].toLocaleUpperCase();
+    console.log(str);
+  } else {
+    console.log("nix");
   }
 }
