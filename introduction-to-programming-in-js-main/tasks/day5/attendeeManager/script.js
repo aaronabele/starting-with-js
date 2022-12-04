@@ -1,24 +1,22 @@
 const attendees = [];
 
-function addAttendee(attendee) {
-  //attendees.push(attendee);
-  //console.log(attendees);
-
-  if (attendee !== attendees.values()) {
-    attendees.push(attendee);
+function addAttendee(attendeeName) {
+  if (!attendees.includes(attendeeName)) {
+    attendees.push(attendeeName);
   } else {
-    console.log("Fehler");
+    console.log("Attendee name already exists.");
   }
 }
 
 function removeAttendee(attendeeName) {
-  attendees.pop(attendeeName);
-  console.log(attendees);
-
-  if (attendeeName !== attendees.values()) {
-    console.log("Cant remove shit");
+  if (attendees.includes(attendeeName)) {
+    function findAttendeeByIndex(attendeeNameInArray) {
+      return attendeeNameInArray === attendeeName;
+    }
+    const arrIndex = attendees.findIndex(findAttendeeByIndex);
+    attendees.splice(arrIndex, 1);
   } else {
-    attendees.pop(attendeeName);
+    console.log("The passed in Name doesn't exist in the attendees array");
   }
 }
 

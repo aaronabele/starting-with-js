@@ -1,12 +1,6 @@
 const johnsData = {
   firstName: "John",
-  getFirstName: function () {
-    return johnsData.firstName;
-  },
   surName: "Doe",
-  getSurName: function () {
-    return johnsData.surName;
-  },
   age: 28,
   city: "Hamburg",
   children: ["Mia", "Fynn"],
@@ -14,14 +8,15 @@ const johnsData = {
 };
 
 function fullName() {
-  console.log(johnsData["firstName"] + " " + johnsData["surName"]);
-  return johnsData["firstName"] + " " + johnsData["surName"];
+  return johnsData.firstName + " " + johnsData.surName;
 }
 
 function changeJohnsData(propName, propValue) {
-  console.log(propName, propValue);
-
-  const johnsDataToArray = johnsData.split("");
-
-  console.log(johnsDataToArray);
+  if (johnsData[propName]) {
+    johnsData[propName] = propValue;
+  } else {
+    console.log(
+      "Sorry the passed in argument doesn't exists as a property in the johnsData object"
+    );
+  }
 }
